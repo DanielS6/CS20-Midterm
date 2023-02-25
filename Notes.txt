@@ -1,0 +1,72 @@
+Organization name: Medford Animal Rescue
+(This is an organization/cause that relies on donations)
+
+https://www.eecs.tufts.edu/~dscher02/midterm/index.html
+Files -> 644
+Directories -> 755
+https://systems.eecs.tufts.edu/personal-web-space/
+
+Pages that we want to include:
+
+1. index.html
+    - Navbar
+    - Images carousel
+    - Mission statement
+    - Animal profiles
+    - Donate
+    - Footer with page sections
+
+2. About
+4. Support us -> Donations, merchandise, volunteering
+5. Adoption -> (adoption survey, dogs for adoption, cats for adoption)
+8. Resources -> (FAQ, contact)
+
+
+
+[] at least 7 pages (no more than 2 pages can be the same as others in the site – for example, a 
+product catalog page)
+    1. index.html home
+    2. About
+    3. Contact
+    4. Support
+    5. Cats
+    6. Dogs
+    7. Adoption survey
+[] at least one external and one internal style sheet
+    [x] external style sheet: styles.css loaded on all pages
+    [] internal style sheet
+[x] fixed page elements (navigation/header/footer) as appropriate per page
+    [x] navigation bar at the top
+    [x] consistent style for headers
+    [x] identical copyright footer at the bottom
+[x] consistent look and feel across all pages
+[] At least one use of an <ol> or <ul>
+[] incorporates Javascript and jQuery
+[] includes a jQuery "special effect" (animation, fade, etc)
+[] includes a form with at least 3 different types of form elements not counting the Submit 
+button
+[] Javascript validation of a form
+[] includes at least two: Javascript array, function, DOM object
+[] has images (at least one is a background image)
+    [] background image
+    [] non-background image
+[] has meta keywords
+[] has at least (15) CSS rules
+[] has one h1 on each page and uses h2 tags for subheadings
+[] can click on site “logo” to return to home page
+[] at least one page must have multiple columns
+[] must be both responsive and mobile friendly - must pass this 
+test: https://search.google.com/test/mobile-friendly 
+[] works online
+[] no broken links
+[] no "lorum ipsum" content
+
+
+Next meeting:
+Monday 27 February at 6pm
+
+Before then, we will:
+Emily - finish navigation bar styling
+Jacob - finish creating the forms for adoption and contact us
+Daniel - finish gallery for main page (including auto switching)
+Joey - FAQ and about page

@@ -1,0 +1,75 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Oswald, 'Arial Narrow Bold', sans-serif;
+}
+html {
+	/* Avoid different widths of h1 background image, etc. on longer pages */
+    overflow-y: scroll;
+}
+body {
+	font-size: 16pt;
+}
+
+
+
+header {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+
+    margin-bottom: 25px;
+}
+
+header a{
+	color:black;
+	text-decoration:none;
+}
+header a:hover {
+	color:orange;
+}
+
+header table {
+	width: 100%;
+}
+
+header, footer {
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    border: 1px solid black;
+	margin-top: 10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo{
+	margin-bottom: 15px;
+}
+
+h1 {
+	/* Center the heading text */
+	text-align: center;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.width-body {
+	width: 50%;
+}
+/* Utility classes */
+.logo {
+	width: 200px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
