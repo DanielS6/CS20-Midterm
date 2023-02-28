@@ -1,46 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Medford Animal Rescue</title>
-    <link rel="stylesheet" type = "text/css" href="./styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <header>
-        <table><tbody>
-        <tr>
-            <td><img src="./images/logo.svg" class="logo"></td>
-        </tr>
-        <tr>
-        <td>
-            Home
-            &#183;
-            <a href="./About.html">About</a>
-            &#183;
-            <a href="./Contact.html">Contact</a>
-            &#183;
-            <a href="./Support.html">Support us</a>
-            &#183;
-            <a href="./Dogs.html">Dogs</a>
-            &#183;
-            <a href="./Cats.html">Cats</a>
-            &#183;
-            <a href="./TODO.html">TODO</a>
-        </td>
-        </tr></tbody></table>
-    </header>
-    <h1>Home</h1>
-    <div class="center width-body">
-    <p>The Medford Animal Rescue's mission is to rescue the lost, abandoned, and mistreated 
-    animals and provide for their relief and safety until they are reunited with a loving owner 
-    or placed in a new home. We are committed to the health and wellness for our animals, 
-    which means no pet will ever be euthanized because it has run out of time to find a 
-    home. We are committed to ending the overpopulation of pets that results in millions of 
-    companion pets being euthanized at shelters in the U.S. every year, therefore all cats and
-    dogs adopted from us are spayed and neutered prior to adoption. We would appreciate your
-    contributions and your willingness to join us in our journey!
-    </p>
-    </div>
+    <head>
+        <title>Medford Animal Rescue</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/index-styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <nav>
+            <a href="index.html"><img src="images/logo.svg" alt="Medford Animal Rescue"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a class="curr-page-nav">Home</a></li>
+                    <li><a href="./About.html">About us</a></li>
+                    <li><a href="./Support.html">Support us</a></li>
+                    <li><a>Adoption</a>
+                        <ul>
+                            <li><a href="./Cats.html">Cats for adoption</a></li>
+                            <li><a href="./Dogs.html">Dogs for adoption</a></li>
+                            <li><a href="./Jacob.html">Adoption application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./Contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+        <!-- MISSION STATEMENT -->
+        <div class="mission-statement centered-div">
+            <h2>Our Mission Statement</h2>
+            <hr>
+            <p>The Medford Animal Rescue’s mission is to rescue the lost, abandoned, and mistreated
+                animals and provide for their relief and safety until they are reunited with a loving owner
+                or placed in a new home. We are committed to the health and wellness for our animals,
+                which means no pet will ever be euthanized because it has run out of time to find a
+                home. We are committed to ending the overpopulation of pets that results in millions of
+                companion pets being euthanized at shelters in the U.S. every year, therefore all cats,
+                rabbits, and dogs adopted from us are spayed and neutered prior to adoption. We
+                would appreciate your contributions and your willingness to join us in our journey!</p>
+        </div>
+    
+        <!-- ANIMAL PROFILES -->
+        <h2>Featured Pets</h2>
+        <hr>
+        <div class="animal-profiles">
+    
+            <div class="pet-card">
+                <img src="images/dog_sqr.jpg">
+                <div class="pet-card-txt">
+                    <h3>Jolanda</h3>
+                    <p> 1 year | Female</p>
+                    <p>Rottweiler</p>
+                </div>
+            </div>
+    
+            <div class="pet-card">
+                <img src="images/dog2_sqr.jpg">
+    
+                <div class="pet-card-txt">
+                    <h3>Giorgio</h3>
+                    <p> 12 years | Male </p>
+                    <p> Pug</p>
+                </div>
+            </div>
+    
+            <div class="pet-card">
+                <img src="images/cat_sqr.jpg">
+    
+                <div class="pet-card-txt">
+                    <h3>Vladimir Purtin </h3>
+                    <p> ask Daniel</p>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- WAYS TO GIVE -->
+        <h2>Ways to give</h2>
+        <hr>
+        <div class="ways-to-give centered-div">
+            <h3>Volunteer with us!</h3>
+            <ul>
+                <li><strong>Dog care: </strong> spend time directly with our 
+                            dogs and help them form healthy bonds via positive 
+                            reinforcement training.</li>
+    
+                <li><strong>Cat Care: </strong> help with feeding, socializing, 
+                            cuddling, and maintaining a clean, healthy, and safe 
+                            environment for our cats.</li>
+    
+                <li><strong>Walks: </strong> assist our staff with walks to improve 
+                            maintain physical fitness and improve socialization, 
+                            confidence, and mood</li>
+    
+                <li><strong>Cleaning:</strong> assist our staff with morning, 
+                            mid-day, and evening procedures.</li>
+    
+                <li><strong>Outreach:</strong> distribute brochures to your 
+                            community (pet shops, coffee shops, groomers,
+                            vets, etc.).</li>
+            </ul>
+            <a href="#" class="volunteer-btn"><strong>APPLY</strong></a>
+        </div>
+    
+        <div class="donation centered-div">
+            <div>
+                <h3>Donate Items!</h3>
+                <br>
+                <p> Items we accept: </p>
+                <ul>
+                    <li>Dog and Cat toys</li>
+                    <li>Medium and large blankets</li>
+                    <li>Small and Medium pet beds</li>
+                    <li>Harnesses and Leashes</li>
+                    <li>Cardboard scratchers</li>
+                    <li>Towels</li>
+                    <li>Cleaning supplies</li>
+                </ul>
+                <p>Come <a href ="#">visit us</a> to drop of items</p>
+            </div>
+            <div class="row2">
+                <h3>Donate Money!</h3>
+                <p>So much of the work we do at Medford Animal Rescue is made possible by donations. Donate today to help us
+                    continue to save animals and give them the care and treatment they need to find loving forever homes.</p>
+                <p>THANK YOU for your generosity! </p> 
+                <br>
+                <a href="#" class="donate-btn"><strong>DONATE</strong></a>
+    
+            </div>    
+    
+        </div>
+    
     <footer>
         <style>
             element {

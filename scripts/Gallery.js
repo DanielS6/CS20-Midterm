@@ -1,48 +1,59 @@
-document.addEventListener( 'DOMContentLoaded', function () {
+// Specifically NOT using DOMContentLoaded but rather the load event so that
+// we can be sure that jQuery has also finished loading
+// See https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+window.addEventListener( 'load', function () {
 
-    // <button>s for going to next and previous image
-    const nextBtn = document.getElementById( 'gallery-next' );
-    const prevBtn = document.getElementById( 'gallery-prev' );
-    
-    // <div> wrapping around all of the image displays (<div> including <img>
-    // and caption) to allow determining which should be shown
-    const galleryImgs = document.getElementById('gallery-images');
-    
-    // Start with the first image (index 0) visible, based on hard-coded HTML
-    let currVisibleIdx = 0;
+    // elements
+    const $img = $('#slideshow-image')
+    const $startBtn = $('#slideshow-start');
+    const $stopBtn = $('#slideshow-stop');
 
-    const VISIBLE_CLASS = 'gallery-visible-image';
-    
-    /**
-     * Handles actually updating which image is visible. This is done by:
-     *   - removing the "gallery-visible-image" class from the currently
-     *     visible image
-     *   - adding the "gallery-visible-image" class to the image that should
-     *     be visible next
-     *
-     * The `currVisibleIdx` variable stores which number child in the
-     * galleryImgs (and thus which number image) is currently visible. This
-     * is updated based on the change parameter, wrapping around (previous
-     * image from the first is the last, next image from the last is the first).
-     *
-     * @param {Number} imageIdxChange Should be 1 (next) or -1 (previous)
-     */
-    const updateVisibleImage = (imageIdxChange) => {
-        // Wrap around from before the first and after the last
-        const numImages = galleryImgs.children.length;
-        const newVisibleIdx = (currVisibleIdx + imageIdxChange + numImages) % numImages;
-        galleryImgs.children[currVisibleIdx].classList.remove(VISIBLE_CLASS);
-        galleryImgs.children[newVisibleIdx].classList.add(VISIBLE_CLASS);
-        currVisibleIdx = newVisibleIdx;
+    // Image sources
+    const imgURLs = [
+        './images/catprofile.jpg',
+        './images/dogprofile.jpg',
+        './images/catprofile2.jpg',
+        './images/dogprofile5.jpg',
+        './images/catprofile2.jpg',
+        './images/dogprofile3.jpg'
+    ];
+    // HTML is coded to start with catprofile.jpg
+    let currImgIdx = 0;
+    let slideshowRunning = false;
+
+    // Milliseconds for fades
+    const SLIDESHOW_SPEED = 1000;
+
+    // Forward declare because of mutual recursion
+    let afterFadeIn;
+    const afterFadeOut = () => {
+        // Stopping the slideshow means that the next image won't fade out,
+        // but we will still finish fading in the current one
+        currImgIdx = (currImgIdx + 1) % imgURLs.length;
+        $img.attr('src', imgURLs[currImgIdx]);
+        $img.fadeIn(SLIDESHOW_SPEED, afterFadeIn);
     };
-    
-    // Make the image with the next index be visible
-    const onNextBtnClick = updateVisibleImage.bind(null, 1);
-    // Make the image with the previous index be visible
-    const onPrevBtnClick = updateVisibleImage.bind(null, -1);
-    
-    // Add the event listeners
-    nextBtn.addEventListener( 'click', onNextBtnClick );
-    prevBtn.addEventListener( 'click', onPrevBtnClick );
-    
+    afterFadeIn = () => {
+        // Don't continue if the slideshow is stopped
+        if (slideshowRunning) {
+            $img.fadeOut(SLIDESHOW_SPEED, afterFadeOut);
+        }
+    };
+
+    const onStartBtn = () => {
+        // Don't trigger multiple fades if already running
+        if (!slideshowRunning) {
+            slideshowRunning = true;
+            // start the next fade out
+            afterFadeIn();
+        }
+    };
+    const onStopBtn = () => {
+        // No harm in setting to false if already false, doesn't do anything
+        slideshowRunning = false;
+    };
+
+    $startBtn.on('click', onStartBtn);
+    $stopBtn.on('click', onStopBtn);
+
 } );

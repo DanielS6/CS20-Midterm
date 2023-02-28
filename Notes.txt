@@ -40,7 +40,7 @@ product catalog page)
     [x] consistent style for headers
     [x] identical copyright footer at the bottom
 [x] consistent look and feel across all pages
-[] At least one use of an <ol> or <ul>
+[x] At least one use of an <ol> or <ul>
 [] incorporates Javascript and jQuery
 [] includes a jQuery "special effect" (animation, fade, etc)
 [] includes a form with at least 3 different types of form elements not counting the Submit 
@@ -49,9 +49,9 @@ button
 [] includes at least two: Javascript array, function, DOM object
 [] has images (at least one is a background image)
     [] background image
-    [] non-background image
+    [x] non-background image
 [] has meta keywords
-[] has at least (15) CSS rules
+[x] has at least (15) CSS rules
 [] has one h1 on each page and uses h2 tags for subheadings
 [] can click on site “logo” to return to home page
 [] at least one page must have multiple columns
@@ -69,4 +69,4 @@ Before then, we will:
 Emily - finish navigation bar styling
 Jacob - finish creating the forms for adoption and contact us
 Daniel - finish gallery for main page (including auto switching)
-Joey - FAQ and about page
+Joey - About page & footer
