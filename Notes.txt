@@ -41,23 +41,23 @@ product catalog page)
     [x] identical copyright footer at the bottom
 [x] consistent look and feel across all pages
 [x] At least one use of an <ol> or <ul>
-[] incorporates Javascript and jQuery
-[] includes a jQuery "special effect" (animation, fade, etc)
+[x] incorporates Javascript and jQuery
+[x] includes a jQuery "special effect" (animation, fade, etc)
 [] includes a form with at least 3 different types of form elements not counting the Submit 
 button
 [] Javascript validation of a form
-[] includes at least two: Javascript array, function, DOM object
+[x] includes at least two: Javascript array, function, DOM object
 [] has images (at least one is a background image)
     [] background image
     [x] non-background image
 [] has meta keywords
 [x] has at least (15) CSS rules
 [] has one h1 on each page and uses h2 tags for subheadings
-[] can click on site “logo” to return to home page
+[x] can click on site “logo” to return to home page
 [] at least one page must have multiple columns
 [] must be both responsive and mobile friendly - must pass this 
 test: https://search.google.com/test/mobile-friendly 
-[] works online
+[x] works online
 [] no broken links
 [] no "lorum ipsum" content
 
@@ -70,3 +70,9 @@ Emily - finish navigation bar styling
 Jacob - finish creating the forms for adoption and contact us
 Daniel - finish gallery for main page (including auto switching)
 Joey - About page & footer
+
+
+Next meeting:
+Wed 1 March at 6:30pm
+
+Emily - Finish Cats for adoption and Dogs for adoption pages

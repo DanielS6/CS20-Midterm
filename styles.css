@@ -16,7 +16,7 @@ a:hover {
     color:orangered;
 }
 h2 {
-    text-align:center;
+    text-align: center;
     font-size: 35px;
 }
 h3 {
@@ -37,7 +37,7 @@ hr {
     margin-left: 45%;
 }
 
-/* * * * * * * NAV BAR * * * * * * * * */
+/******* NAV BAR *********/
 nav {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
