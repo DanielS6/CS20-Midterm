@@ -26,45 +26,35 @@
                 </ul>
             </div>
         </nav>
-    
-    <footer>
-        <style>
-            element {
-                display: flex;
-                width: 100px;
-                height: 100px;
-                align-items: center;
-                justify-content: center;
-                font-size: 15px;
-                font-weight: bold;
-                background-color: #FF7F50;
-            }
 
-            list {
-                display: flex;
-                width: 100px;
-                height: 100px;
-                align-items: center;
-                justify-content: center;
-                font-size: 15px;
-                font-weight: bold;
-                background-color: #FF7F50;
-            }
-        </style>
-            <div id="element">About Us</div>
-            <div id="list"><a href="./About.html">About</a></div>
-            <a href="./Contact.html">Contact</a>
-            <div id="element">Support</div>
-            <a href="#">Donate</a>
-            <a href="#">Merchandise</a>
-            <a href="#">Volunteer</a>
-            <div id="element">Adopt</div>
-            <a href="#">Adoption Survey</a>
-            <a href="./Dogs.html">Dogs for Adoption</a>
-            <a href="./Cats.html">Cats for Adoption</a>
-            </div>
-            
-            <!-- <span>Medford Animal Rescue &copy; 2023</span> -->
+        <div class="space"></div>
+    <!-- Not sure which CSS rule is changing the text color, and why the text is not centered. -->
+    <footer>
+        <table> 
+            <tr>
+                <th>About</th>
+                <th>Support</th>
+                <th>Adopt</th>
+            </tr>
+            <tr class="row">
+                <th><a href="./About.html">About</a></th>
+                <th><a href="#">Donate</a></th>
+                <th><a href="#">Adoption Survey</a></th>
+            </tr>
+            <tr class="row">
+                <th><a href="./Contact.html">Contact</a></th>
+                <th><a href="#">Merchandise</a></th>
+                <th><a href="./Dogs.html">Dogs for Adoption</a></td>
+            </tr>
+            <tr class="row">
+                <th></th>
+                <th><a href="#">Volunteer</a></th>
+                <th><a href="./Cats.html">Cats for Adoption</a></th>
+            </tr> 
+    </table>
+    <br />
+    <br />
+    <span style="padding: 5px; border: solid; border-width: thin;">Medford Animal Rescue &copy; 2023</span>
     </footer>
 </body>
 </html>

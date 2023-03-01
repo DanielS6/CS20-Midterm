@@ -4,3 +4,20 @@
     font-size: 20px;
     line-height: 30px;
 }
+
+/******* WAYS TO GIVE *********/
+.about {
+    text-align: center;
+    border: solid 1.5px orange;
+    border-radius: 50px;
+    margin: 0 15%;
+    padding: 55px;
+}
+
+.about-heading {
+    padding-top: 50px;
+}
+
+.space {
+    padding-top: 50px;
+}

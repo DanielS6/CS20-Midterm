@@ -1,0 +1,32 @@
+.space {
+    padding-top: 125px;
+}
+
+footer {
+    background-color: orange;
+}
+
+footer table { 
+    border-collapse: collapse;
+    width: 50%;
+    margin: 60px auto 45px auto;
+    row-gap: 5px;
+}
+
+footer th, footer a {
+    font-size: 40px;
+    font-family: Oswald, 'Arial Narrow Bold', sans-serif;
+    color: #000000;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+footer a {
+    font-size: 19px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+    padding: 1%;
+    background: #1c55b1b5;
+}
