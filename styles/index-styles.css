@@ -8,13 +8,11 @@ footer {
 
 footer table { 
     border-collapse: collapse;
-    width: 50%;
     margin: 60px auto 45px auto;
     row-gap: 5px;
 }
 
 footer th, footer a {
-    font-size: 40px;
     font-family: Oswald, 'Arial Narrow Bold', sans-serif;
     color: #000000;
     font-weight: lighter;

@@ -9,10 +9,12 @@
     width: fit-content;
 }
 /* Consistent image size, spacing between image and buttons */
-#slideshow-image {
+#gallery-wrapper img {
     width: 250px;
     height: 250px;
     padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 /* Align start/stop to left and right of the image boundaries */
 #slideshow-start {

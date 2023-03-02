@@ -4,7 +4,15 @@
         <title>Medford Animal Rescue</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" type="text/css" href="styles/index-styles.css">
+        <link rel="stylesheet" type="text/css" href="styles/gallery-styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./scripts/Gallery.js"></script>
+        <!-- Load jQuery too -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous">
+        </script>
     </head>
     
     <body>
@@ -27,34 +35,29 @@
             </div>
         </nav>
 
+        <div class="centered-div">
+            <div id="gallery">
+                <div id="gallery-wrapper">
+                    <img src="./images/cat3.jpg" id="slideshow-image-left">
+                    <img src="./images/dog3.jpg" id="slideshow-image-mid">
+                    <img src="./images/cat4.jpg" id="slideshow-image-right">
+                    <br>
+                </div>
+                <button id="slideshow-start">Start slideshow</button>
+                <button id="slideshow-stop">Stop slideshow</button>
+            </div>
+        </div>
         <div class="space"></div>
-    <!-- Not sure which CSS rule is changing the text color, and why the text is not centered. -->
     <footer>
         <table> 
-            <tr>
-                <th>About</th>
-                <th>Support</th>
-                <th>Adopt</th>
-            </tr>
             <tr class="row">
                 <th><a href="./About.html">About</a></th>
-                <th><a href="#">Donate</a></th>
-                <th><a href="#">Adoption Survey</a></th>
-            </tr>
-            <tr class="row">
+                <th><a href="./Support.html"></a>Support</a></th>
+                <th><span style="padding: 5px; border: solid; border-width: thin;">Medford Animal Rescue &copy; 2023</span></th>
+                <th><a href="./Adopt.html">Adopt</a></th>
                 <th><a href="./Contact.html">Contact</a></th>
-                <th><a href="#">Merchandise</a></th>
-                <th><a href="./Dogs.html">Dogs for Adoption</a></td>
             </tr>
-            <tr class="row">
-                <th></th>
-                <th><a href="#">Volunteer</a></th>
-                <th><a href="./Cats.html">Cats for Adoption</a></th>
-            </tr> 
     </table>
-    <br />
-    <br />
-    <span style="padding: 5px; border: solid; border-width: thin;">Medford Animal Rescue &copy; 2023</span>
     </footer>
 </body>
 </html>

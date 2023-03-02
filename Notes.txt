@@ -76,3 +76,9 @@ Next meeting:
 Wed 1 March at 6:30pm
 
 Emily - Finish Cats for adoption and Dogs for adoption pages
+
+Next meeting: Sunday
+Emily: styling the contact form, image (file) resizing
+Jacob: volunteering form
+Joey: footer, about us cleanup, content for main page
+Daniel: JS cleanup, style audit, clear out unused images, etc.
