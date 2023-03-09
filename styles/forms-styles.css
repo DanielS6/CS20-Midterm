@@ -1,0 +1,81 @@
+label, select, p, button{
+    font-size: 20px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+p{
+    margin: 15px 0 10px 0;
+}
+
+select {
+    width:42%;
+
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 30%);
+    border-radius: 4px;
+    border: 1px solid #ebebeb;
+    
+    margin-bottom: 25px;
+}
+
+form {
+    margin: 50px 15% 80px 15%;
+}
+
+
+.sideBanner {
+    width: 45%;
+}
+#sideBannerImg {
+    width: 100%;
+   position:sticky;
+   top: 0;
+}
+
+.row {
+    display:flex;
+
+}
+
+.half-col{
+    margin-right: 10%;
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+.long-col {
+    width:100%;
+}
+
+input[type=text] {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 30%);
+    border-radius: 4px;
+    border: 1px solid #ebebeb;
+
+    height: 50px;
+
+    box-sizing: border-box;
+    
+    padding: 14px 20px;
+    margin: 10px 0 15px 0;
+
+    width:100%;
+
+    justify-content: space-between;
+
+    font-size:20px;
+}
+
+input[type=text]:focus::placeholder {
+    color: transparent;
+  }
+
+  input[type=text]::placeholder {
+    color: rgb(189, 189, 189);
+  }
+
+select{
+    padding: 8px;
+}
+

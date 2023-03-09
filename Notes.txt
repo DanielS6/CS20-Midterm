@@ -82,3 +82,11 @@ Emily: styling the contact form, image (file) resizing
 Jacob: volunteering form
 Joey: footer, about us cleanup, content for main page
 Daniel: JS cleanup, style audit, clear out unused images, etc.
+
+Availability:
+Tuesday March 14:
+
+0915-1030: Emily, Joey, Jacob
+1030-1130: Emily, Joey, Jacob <-- signed up
+1430-1545: Emily, Joey
+1600-1700: Emily, Jacob
