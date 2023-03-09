@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/support-styles.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./scripts/Adopt-form.js"></script>
 </head>
 
 <body>
@@ -32,50 +33,44 @@
 
     <h1> Apply to adopt! </h1>
     <div class="row">
-        <form>
+        <form id="adopt-form">
             <!-- {Personal} -->
-            <div class="row">
-                <div class="half-col">
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" value="" >
-                </div>
-
-                <div class="half-col">
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" value="" >
-                </div>
-            </div>
 
                 <div class="long-col">
-                    <label for="email">E-mail:</label>
+                    <label for="name">Name: <span class="req-field">*</span></label> 
+                    <input type="text" id="name" name="name" value="" >
+                </div>
+
+                <div class="long-col">
+                    <label for="email">E-mail: <span class="req-field">*</span></label> 
                     <input type="text" id="email" name="email" value="" >
                 </div>
             
 
             <div class="long-col">
-                <label for="Number">Phone Number:</label>
-                <input type="text" id="Number" name="Number" value="" >
+                <label for="number">Phone Number: <span class="req-field">*</span></label> 
+                <input type="text" id="number" name="number" value="" >
     
             </div>
 
             <div class="row">
                 <div class="half-col">
-                    <label for="address">Street address:</label>
+                    <label for="address">Street address: <span class="req-field">*</span></label> 
                     <input type="text" id="address" name="address" value="" >
                 </div>
                 <div class="half-col">
-                    <label for="city">City:</label>
+                    <label for="city">City: <span class="req-field">*</span></label> 
                     <input type="text" id="city" name="city" value="" >
                 </div>
             </div>
 
             <div class="row">
                 <div class="half-col">
-                    <label for="zipcode">State:</label>
-                    <input type="text" id="zipcode" name="zipcode" value="" >        
+                    <label for="state">State: <span class="req-field">*</span></label> 
+                    <input type="text" id="state" name="state" value="" >        
                 </div>
                 <div class="half-col">
-                    <label for="zipcode">Zip Code:</label>
+                    <label for="zipcode">Zip Code: <span class="req-field">*</span></label> 
                     <input type="text" id="zipcode" name="zipcode" value="" >        
                 </div>
             </div>
@@ -88,7 +83,7 @@
                 
 
                 
-            <label for="cars">Which dog/cat are you interested in?</label>
+            <label for="cars">Which dog/cat are you interested in? <span class="req-field">*</span></label> 
             <select name="catsdogs" id="catsdogs">
                 <option value="" disabled selected hidden> Select</option>
                 <optgroup label="Dogs">
@@ -115,56 +110,65 @@
 
 
             <div class="row">
-                    <label for="numpets">Number of indoor cat(s)/dog(s):</label><br>
+                    <label for="numpets">Number of indoor cat(s)/dog(s): <span class="req-field">*</span></label><br>
                     <input type="text" id="numpets" name="numpets" value=""><br>
             </div>
 
             <!-- {Pet Life} --->
-            <p>Are the other pets in your household spayed/neutered?</p>
-            <input type="radio" name='petsSpayedChoice'> <label>Yes</label>
-            <input type="radio" name='petsSpayedChoice'> <label>No</label>
+            <p>Are the other pets in your household spayed/neutered? </p>
+            <input type="radio" name='petsSpayedChoice' id="petsSpayedChoice-yes">
+            <label for="petsSpayedChoice-yes">Yes</label>
+            <input type="radio" name='petsSpayedChoice' id="petsSpayedChoice-no" checked>
+            <label for="petsSpayedChoice-no">No</label>
             <br><br>
             
-            <p>Do you or anyone in your house have any known allergies to dogs?</p>
-            <input type="radio" name='allergyChoice'> <label>Yes</label>
-            <input type="radio" name='allergyChoice'> <label>No</label>
+            <p>Do you or anyone in your house have any known allergies to cats/dogs? </p>
+            <input type="radio" name='allergyChoice' id="allergyChoice-yes">
+            <label for="allergyChoice-yes">Yes</label>
+            <input type="radio" name='allergyChoice' id="allergyChoice-no" checked>
+            <label for="allergyChoice-no">No</label>
             <br><br>
             
-            <p>Have you owned a dog before?</p>
-            <input type="radio" name='firstDogChoice'> <label>Yes</label>
-            <input type="radio" name='firstDogChoice'> <label>No</label>
+            <p>Have you owned a cat/dog before? </p>
+            <input type="radio" name='priorPetChoice' id="priorPetChoice-yes">
+            <label for="priorPetChoice-yes">Yes</label>
+            <input type="radio" name='priorPetChoice' id="priorPetChoice-no" checked>
+            <label for="priorPetChoice-no">No</label>
             <br><br>
 
-            <p>Do you have a fenced-in area on your property?</p>
-            <input type="radio" name='fenceChoice'> <label>Yes</label>
-            <input type="radio" name='fenceChoice'> <label>No</label>
+            <p>Do you have a fenced-in area on your property? </p>
+            <input type="radio" name='fenceChoice' id="fenceChoice-yes" checked>
+            <label for="fenceChoice-yes">Yes</label>
+            <input type="radio" name='fenceChoice' id="fenceChoice-no">
+            <label for="fenceChoice-no">No</label>
             <br><br><br>
 
 
-            <label for="Ques1">If you have no fence, how do you plan to have your new dog relieve itself?</label><br>
+            <label for="Ques1">If you have no fence, how do you plan to have your new cat/dog relieve themselves?</label><br>
             <input type="text" id="Ques1" name="Ques1" value=""><br><br>
             
-            <label for="Ques2">How many hours each day will your dog be alone?</label>
+            <label for="Ques2">How many hours each day will your cat/dog be alone? <span class="req-field">*</span></label>
             <input type="text" id="Ques2" name="Ques2" value=""><br><br>
 
             <p>Do all adults work full time?</p>
-            <input type="radio" name='workChoice'> <label>Yes</label>
-            <input type="radio" name='workChoice'> <label>No</label>
+            <input type="radio" name='workChoice' id="workChoice-yes" checked>
+            <label for="workChoice-yes">Yes</label>
+            <input type="radio" name='workChoice' id="workChoice-no">
+            <label for="workChoice-no">No</label>
             <br><br>
 
 
 
-            <label for="Ques3">Where will your dog be kept when it is alone?</label><br>
+            <label for="Ques3">Where will your cat/dog be kept when it is alone? <span class="req-field">*</span></label><br>
             <input type="text" id="Ques3" name="Ques3" value=""><br><br>
-            <label for="Ques4">Where will your dog sleep at night?</label><br>
+            <label for="Ques4">Where will your cat/dog sleep at night? <span class="req-field">*</span></label><br>
             <input type="text" id="Ques4" name="Ques4" value=""><br><br>
-            <label for="Ques5">Is there any additional information you wish to share about your home or the type of dog
-                you
-                are looking for?</label><br>
+            <label for="Ques5">Is there any additional information you wish to share about your home or the type of cat/dog
+                you are looking for?</label><br>
             <input type="text" id="Ques5" name="Ques5" value=""><br><br>
 
 
-            <button id="volunteer-btn">Submit</button>
+            <button class="orange-button" id="abopt-btn">Submit</button>
         </form>
                
         <div class="sideBanner">

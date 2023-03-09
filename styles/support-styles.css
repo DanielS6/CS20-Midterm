@@ -22,7 +22,7 @@
     margin: 10px;
 }
 
-#volunteer-btn,
+/* #volunteer-btn,
 #donate-btn {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
     background-color: white;
@@ -42,7 +42,7 @@
 #donate-btn:active {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0);
     transition: .2s;
-}
+} */
 
 .donation {
     display: flex;

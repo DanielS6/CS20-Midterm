@@ -23,7 +23,7 @@ Pages that we want to include:
 
 
 
-[] at least 7 pages (no more than 2 pages can be the same as others in the site – for example, a 
+[x] at least 7 pages (no more than 2 pages can be the same as others in the site – for example, a 
 product catalog page)
     1. index.html home
     2. About
@@ -50,16 +50,16 @@ button
 [] has images (at least one is a background image)
     [] background image
     [x] non-background image
-[] has meta keywords
+[x] has meta keywords
 [x] has at least (15) CSS rules
-[] has one h1 on each page and uses h2 tags for subheadings
+[x] has one h1 on each page and uses h2 tags for subheadings
 [x] can click on site “logo” to return to home page
-[] at least one page must have multiple columns
+[x] at least one page must have multiple columns
 [] must be both responsive and mobile friendly - must pass this 
 test: https://search.google.com/test/mobile-friendly 
 [x] works online
-[] no broken links
-[] no "lorum ipsum" content
+[x] no broken links
+[x] no "lorum ipsum" content
 
 
 Next meeting:
@@ -90,3 +90,26 @@ Tuesday March 14:
 1030-1130: Emily, Joey, Jacob <-- signed up
 1430-1545: Emily, Joey
 1600-1700: Emily, Jacob
+
+
+* * * things that need to get done * * * (before Friday at 5:30 when we meet)
+Index page 
+    - background image for landing?
+About us & support us 
+    - styling orange boxes stuff
+Cats and Dog pages:
+    - Add button element if time allows, otherwise remove 
+    hover effect 
+Adoption application:
+    - Finish validation JS (Daniel)
+Contact: 
+    - style
+
+    
+
+Responsiveness
+
+Daniel: Adoption validation JS
+Joey: Home page and about us and footer
+Emily: Contact page outline and styles
+Jacob: starting a presentation script

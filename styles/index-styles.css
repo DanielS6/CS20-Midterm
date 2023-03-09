@@ -13,6 +13,7 @@ footer table {
 }
 
 footer th, footer a {
+    margin: auto;
     font-family: Oswald, 'Arial Narrow Bold', sans-serif;
     color: #000000;
     font-weight: lighter;
@@ -22,9 +23,10 @@ footer th, footer a {
 footer a {
     font-size: 19px;
     transition: all 0.2s ease-in-out;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
 }
-
 footer a:hover {
-    padding: 1%;
     background: #1c55b1b5;
 }

@@ -3,6 +3,8 @@
 <head>
     <title>Medford Animal Rescue - Contact</title>
     <link rel="stylesheet" type = "text/css" href="./styles.css">
+    <link rel="stylesheet" type = "text/css" href="./forms-styles.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -16,86 +18,95 @@
                 <li><a>Adoption</a>
                     <ul>
                         <li><a href="./Cats.html">Cats for adoption</a></li>
-                        <li><a class="curr-page-nav">Dogs for adoption</a></li>
+                        <li><a class="./Dogs.html">Dogs for adoption</a></li>
                         <li><a href="./Adopt.html">Adoption application</a></li>
                     </ul>
                 </li>
-                <li><a href="./Contact.html">Contact us</a></li>
+                <li><a class="curr-page-nav">Contact us</a></li>
             </ul>
         </div>
     </nav>
+
     <h1>Contact</h1>
-    <div class="center width-body">
-    <p></p>
+
+    <div class = "row">
+        <div>
+            <p> Medford Animal Shelter </p>
+            <p> 9 A.M. to 5 P.M. </p>
+            <p>177 College Ave, Medford, MA 02155</p>
+            <p>Phone: 508.555.8989</p>
+            <p>Fax: 508.555.3075</p>
+            <form>
+                <label for="fname">First name</label><br>
+                <input type="text" id="fname" name="fname" value=""><br><br>
+                <label for="lname">Last name</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <label for="reason">Reason for Contact</label><br>
+                <input type="text" id="reason" name="reason" value=""><br><br>
+                <label for="Number">Phone Number</label><br>
+                <input type="text" id="Number" name="Number" value=""><br><br>
+                <label for="Email">Email</label><br>
+                <input type="text" id="Email" name="Email" value=""><br><br>
+
+            </form>
+        </div>
     </div>
-    <!-- <table class="center" id="contactFormTable"><tbody>
-        <tr><td>TODO</td></tr>
-    </tbody></table> -->
-    Medford Animal Shelter<br><br>
-
-9 A.M. to 5 P.M. <br><br>
-
-177 College Ave, Medford, MA 02155<br><br>
-
-Phone: 508.555.8989<br><br>
-
-Fax: 508.555.3075<br><br>
-
-
-
-<label for="fname">First name</label><br>
-<input type="text" id="fname" name="fname" value=""><br><br>
-<label for="lname">Last name</label><br>
-<input type="text" id="lname" name="lname" value=""><br><br>
-<label for="reason">Reason for Contact</label><br>
-<input type="text" id="reason" name="reason" value=""><br><br>
-<label for="Number">Phone Number</label><br>
-<input type="text" id="Number" name="Number" value=""><br><br>
-<label for="Email">Email</label><br>
-<input type="text" id="Email" name="Email" value=""><br><br>
-
 
 
 <!--Volunteer App-->
 Volunteering
+Ways to Volunteer:
+
+Daily Feeding, Care and Cleaning
+Our cat volunteers feed the cats breakfast and dinner every day of the week, 
+scoop litter boxes, socialize with the cats and clean cages.  Our dog volunteers feed breakfast and dinner and also walk the dogs 
+at lunchtime and around 8:00 p.m. for a total of four visits per day for the dogs. All volunteers must go through 
+training and then work with experienced volunteers to ensure procedures are followed.
+<br><br>
+Transporting Pets to the Shelter or to the Vet
+We are always looking for ways to reduce our costs so we can afford to help more pets. 
+One way we do that is by taking advantage of the low-cost spay/neuter clinics in the area. We use Tufts Vet School's.
+They are close enough for us to use in addition to our wonderful local vet clinics. 
+One of our many volunteer opportunities is to drive our pets to their surgery appointments or bring them home after.  
+If you can help by driving to or from one of these clinics, please let us know.
 
 <form>
-    <label for="fname">First name</label><br>
+    <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname" value=""><br><br>
-    <label for="lname">Last name</label><br>
+    <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value=""><br><br>
     <label for="reason">Phone Number</label><br>
     <input type="text" id="number" name="number" value=""><br><br>
     <label for="reason">Email</label><br>
     <input type="text" id="email" name="email" value=""><br><br>
-    <label for="reason">Age (if under 21) All volunteers must be 16 or older to volunteer </label><br>
+    <label for="reason">Age (if under 21) All volunteers must be 16 or older to volunteer</label><br>
     <input type="text" id="age" name="age" value=""><br><br>
     Have you owned a pet before?<br><br>
     <input type = "radio" name = 'choice1'> Yes
-    <input type ="radio" name = 'choice2'> No
+    <input type ="radio" name = 'choice1'> No
     <br><br>
     Do you have any experience volunteering at an animal shelter or rescue?
-    <input type = "radio" name = 'choice1'> Yes
+    <input type = "radio" name = 'choice2'> Yes
     <input type ="radio" name = 'choice2'> No
     <br><br>
     
     
     What days are you available to volunteer?<br><br>
-    <input type = "checkbox" name = 'day1'> Sunday
-    <input type ="checkbox" name = 'day2'> Monday
-    <input type = "checkbox" name = 'day3'> Tuesday
-    <input type = "checkbox" name = 'day4'> Wednesday
-    <input type = "checkbox" name = 'day5'> Thursday
-    <input type = "checkbox" name = 'day6'> Friday
+    <input type = "checkbox" name = 'day1'> Sunday<br><br>
+    <input type ="checkbox" name = 'day2'> Monday<br><br>
+    <input type = "checkbox" name = 'day3'> Tuesday<br><br>
+    <input type = "checkbox" name = 'day4'> Wednesday<br><br>
+    <input type = "checkbox" name = 'day5'> Thursday<br><br>
+    <input type = "checkbox" name = 'day6'> Friday<br><br>
     <input type = "checkbox" name = 'day7'> Saturday
     <br><br>
     
     Please select the ways in which you can volunteer.<br><br>
-    <input type = "checkbox" name = 'choice1'> Daily Feeding, Care and Cleaning
-    <input type ="checkbox" name = 'choice2'> Transporting Pets to the Shelter or to the Vet
-    <input type ="checkbox" name = 'choice3'>Basic Obedience Training for Dogs
-    <input type ="checkbox" name = 'choice4'>Laundry 
-    <input type ="checkbox" name = 'choice5'> Taking photos and videos of the pets for our website and social media
+    <input type = "checkbox" name = 'xchoice1'> Daily Feeding, Care and Cleaning<br><br>
+    <input type ="checkbox" name = 'xchoice2'> Transporting Pets to the Shelter or to the Vet<br><br>
+    <input type ="checkbox" name = 'xchoice3'>Basic Obedience Training for Dogs<br><br>
+    <input type ="checkbox" name = 'xchoice4'>Laundry <br><br>
+    <input type ="checkbox" name = 'xchoice5'> Taking photos and videos of the pets for our website and social media<br><br>
     
     
     
@@ -104,6 +115,8 @@ Volunteering
     
     <input type="submit" value="Submit">
     </form>
+    
+    
 
     <footer>
         <span>Medford Animal Rescue &copy; 2023</span>

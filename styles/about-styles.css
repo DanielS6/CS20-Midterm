@@ -1,3 +1,5 @@
+
+
 /******* MISSION STATEMENT *********/
 #mission-statement p,
 #location p {
@@ -7,12 +9,25 @@
 
 /******* WAYS TO GIVE *********/
 .about {
+    /* background-color: orange; */
+    font-size: 2vmin;
     text-align: center;
     border: solid 1.5px orange;
     border-radius: 50px;
     margin: 0 15%;
     padding: 55px;
-    box-shadow: 10px 10px 5px gray;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#box1:hover {
+    background: "./images/cat2.jpg";
+    transition: .2s;
+}
+
+
+.about:hover {
+    box-shadow: 0px 0px 10px 2px rgba(50, 42, 18, 0.2);
+    transition: .2s;
 }
 /* 
 .about-heading {
