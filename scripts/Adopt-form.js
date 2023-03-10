@@ -1,63 +1,90 @@
 document.addEventListener( 'DOMContentLoaded', function () {
 
-    // Form fields
-    const fldName = document.getElementById('name');
-    const fldEmail = document.getElementById('email');
-    const fldPhone = document.getElementById('number');
+    /**
+     * Create a new element for the given tag with the specified content. If
+     * it is a string, it is set as the *text content*, otherwise it should be
+     * an array, and each element is appended.
+     *
+     * @param {string} tagName 
+     * @param {string|Element[]} contents 
+     * @param {string[]} classes
+     * @return {Element}
+     */
+    const makeElement = (tagName, contents, classes) => {
+        const elem = document.createElement(tagName);
+        if (typeof contents === 'string') {
+            elem.textContent = contents;
+        } else {
+            elem.append(...contents);
+        }
+        (classes || []).forEach((c) => elem.classList.add(c));
+        return elem;
+    };
 
-    const fldStreet = document.getElementById('address');
-    const fldCity = document.getElementById('city');
-    const fldState = document.getElementById('state');
+    // Form fields that we need to access specifically for extra validation
+    const fldPhone = document.getElementById('number');
     const fldZip = document.getElementById('zipcode');
 
-    const fldPet = document.getElementById('catsdogs');
-    const fldCount = document.getElementById('numpets');
-    const fldNeutered = document.getElementById('');
-    const [fldNeuteredY, fldNeuteredN] = document.querySelectorAll('input[name="petsSpayedChoice"]');
-    const [fldAllergyY, fldAllergyN] = document.querySelectorAll('input[name="allergyChoice"]');
-    const [fldPriorY, fldPriorN] = document.querySelectorAll('input[name="priorPetChoice"]');
-    const [fldFencedY, fldFencedN] = document.querySelectorAll('input[name="fenceChoice"]');
-    const fldRelieve = document.getElementById('Ques1');
-    const fldAloneHr = document.getElementById('Ques2');
-    const [fldWorkY, fldWorkN] = document.querySelectorAll('input[name="workChoice"]');
-    const fldAloneLoc = document.getElementById('Ques3');
-    const fldSleepLoc = document.getElementById('Ques4');
-    const fldExtra = document.getElementById('Ques5');
-
-    const submitBtn = document.getElementById('adopt-btn');
-
-    console.log('Loaded!');
-
-    // Validator: anonymous function that returns true for no error, or a string
-    const requireField = (fldElem, fldName, whenHaveCb) => {
-        if (fldElem.value === '') {
-            return 'The `' + fldName + '` field is required';
-        }
-        const defaultCb = (v) => true;
-        return ((whenHaveCb || defaultCb)(fldElem.value));
+    // Add custom invalid messages for an input when the value is non-empty
+    // but does not match the pattern
+    const addValidation = (fldElem, nonEmptyError) => {
+        fldElem.addEventListener('input', () => {
+            fldElem.setCustomValidity('');
+            fldElem.checkValidity();
+        });
+        fldElem.addEventListener('invalid', () => {
+            if (fldElem.value === '') {
+                fldElem.setCustomValidity('Please fill out this field.');
+            } else {
+                fldElem.setCustomValidity(nonEmptyError);
+            }
+        });
     };
-    const makeRequire = (fldElem, fldName, whenHaveCb) =>
-        requireField.bind(null, fldElem, fldName, whenHaveCb);
-    const validators = [
-        makeRequire(fldName, 'name'),
-        makeRequire(fldEmail, 'email'),
-        makeRequire(fldPhone, 'phone',
-            (v) => (v.match(/^\d{10}$/) !== null || 'Phone numbers should be 10 digits')),
-        makeRequire(fldStreet, 'address'),
-        makeRequire(fldCity, 'city'),
-        makeRequire(fldState, 'state'),
-        makeRequire(fldZip, 'zip code',
-            (v) => (v.match(/^\d{5}$/) !== null || 'Zip codes should be 5 digits')),
-        makeRequire(fldPet, 'pet'),
-        makeRequire(fldAloneHr, 'pet being alone (time)'),
-        makeRequire(fldAloneLoc, 'pet being alone (keeping)'),
-        makeRequire(fldSleepLoc, 'pet sleep location'),
-    ];
-    const adoptForm = document.getElementById('adopt-form');
+    addValidation(fldPhone, 'Phone numbers should have 10 digits.');
+    addValidation(fldZip, 'Zip code should have 5 digits.');
+
+    const getSubmissionPopup = () => {
+        const popupLabel = makeElement(
+            'strong', 'Form submitted', [ 'submission-popup-label' ]
+        );
+        let popupMessage = 'Thank you for submitting an adoption application.';
+        popupMessage += ' We will contact you in the next few days.'
+        const popupText = makeElement(
+            'span', popupMessage, [ 'submission-popup-text' ]
+        );
+        const popupBtn = makeElement(
+            'button', 'Return to home', [ 'submission-popup-btn' ]
+        );
+        const popupBtnWrapper = makeElement(
+            'div', [popupBtn], [ 'submission-popup-btn-wrapper' ]
+        );
+        const hr = makeElement('hr', '');
+        const popupDialog = makeElement(
+            'div',
+            [ popupLabel, popupText, hr, popupBtnWrapper],
+            [ 'submission-popup-dialog' ]
+        );
+        const popupWrapper = makeElement(
+            'div', [popupDialog], [ 'submission-popup-wrapper' ]
+        );
+        // When the button gets clicked, make overall wrapper emit `click`
+        popupBtn.addEventListener('click', () => {
+            const clickEvent = new Event('click');
+            popupWrapper.dispatchEvent(clickEvent);
+        });
+        return popupWrapper;
+    }
+
     const onFormSubmit = (e) => {
         e.preventDefault();
-        const errors = validators.map(v => v()).filter(r => r !== true);
-        console.log(errors);
+        // Validation is done with the individual fields, if we get here we
+        // are already validated
+        const popup = getSubmissionPopup();
+        document.querySelector('body').append(popup);
+        popup.addEventListener('click', () => {
+            location.assign('./index.html');
+        });
     };
+    const adoptForm = document.getElementById('adopt-form');
     adoptForm.addEventListener('submit', onFormSubmit);
 } );

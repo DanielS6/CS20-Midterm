@@ -1,15 +1,17 @@
 .space {
-    padding-top: 125px;
+    padding-top: 10vw;
 }
 
 footer {
+    display: flex; justify-content: center;
+    height: 8vw;
     background-color: orange;
 }
 
 footer table { 
     border-collapse: collapse;
-    margin: 60px auto 45px auto;
-    row-gap: 5px;
+    margin: 1vw auto 1vw auto;
+    row-gap: 1vw;
 }
 
 footer th, footer a {
@@ -21,12 +23,13 @@ footer th, footer a {
 }
 
 footer a {
-    font-size: 19px;
+    font-size: 1.5vw;
     transition: all 0.2s ease-in-out;
-    padding: 5px;
-    margin: 20px;
+    padding: .3vw;
+    margin: 2vw;
     display: flex;
 }
+
 footer a:hover {
     background: #1c55b1b5;
 }
