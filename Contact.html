@@ -12,19 +12,34 @@
             margin: 60px 0;
         }
 
-        input[type=text] { 
-            margin: 10px 0;        
+        input[type=text] {
+            margin: 10px 0;
             height: 40px;
         }
 
         #reason {
-            height:150px;
+            height: 150px;
+            resize: vertical;
         }
 
         .container {
-            margin: 5% 15% 0 15%;
+            margin: 50px 15% 0 15%;
         }
 
+        #map-container {
+            height: 300px;
+            width: 100%;
+            box-shadow: inset 0 0 10px grey;
+            margin-bottom: -10px;
+
+
+            /* min-height: 100vh; */
+            /* width: 100%; */
+            /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/bg_small.jpg); */
+            background-position: center;
+            background-size: cover;
+            background-image: url('./images/b_map.png');
+        }
     </style>
 </head>
 
@@ -62,24 +77,32 @@
             </div>
             <div class="half-col">
                 <form>
-                    <label for="fname">Name</label><br>
-                    <input type="text" id="fname" name="fname" value=""><br><br>
-                    <label for="Email">Email</label><br>
-                    <input type="text" id="Email" name="Email" value=""><br><br>
-                    <label for="reason">Message</label><br>
-                    <textarea type="text" id="reason" name="reason" value=""></textarea><br><br>
-                    <button class = "orange-button">Send us your message</button>
+                    <label for="fname">Name: <span class="req-field">*</span></label><br>
+                    <input type="text" id="fname" name="fname" autocomplete="name" required><br><br>
+                    <label for="Email">Email: <span class="req-field">*</span></label><br>
+                    <input type="email" id="Email" name="Email" autocomplete="email" required><br><br>
+                    <label for="reason">Message: <span class="req-field">*</span></label><br>
+                    <textarea type="text" id="reason" name="reason" required></textarea><br><br>
+                    <button class="orange-button">Send us your message</button>
                 </form>
             </div>
 
         </div>
     </div>
 
-    <div id="map_div" style = "background-image: url('./images/b_map.png')">&nbsp</div>
+    <div id="map-container">&nbsp</div>
 
 
     <footer>
-        <span>Medford Animal Rescue &copy; 2023</span>
+        <table>
+            <tr>
+                <th><a href="./About.html">About</a></th>
+                <th><a href="./Support.html">Support</a></th>
+                <th><span class="footer-copyright">Medford Animal Rescue &copy; 2023</span></th>
+                <th><a href="./Adopt.html">Adopt</a></th>
+                <th><a>Contact</a></th>
+            </tr>
+        </table>
     </footer>
 
 </body>

@@ -43,12 +43,12 @@ product catalog page)
 [x] At least one use of an <ol> or <ul>
 [x] incorporates Javascript and jQuery
 [x] includes a jQuery "special effect" (animation, fade, etc)
-[] includes a form with at least 3 different types of form elements not counting the Submit 
+[x] includes a form with at least 3 different types of form elements not counting the Submit 
 button
-[] Javascript validation of a form
+[x] Javascript validation of a form
 [x] includes at least two: Javascript array, function, DOM object
-[] has images (at least one is a background image)
-    [] background image
+[x] has images (at least one is a background image)
+    [x] background image
     [x] non-background image
 [x] has meta keywords
 [x] has at least (15) CSS rules
@@ -62,54 +62,30 @@ test: https://search.google.com/test/mobile-friendly
 [x] no "lorum ipsum" content
 
 
-Next meeting:
-Monday 27 February at 6pm
-
-Before then, we will:
-Emily - finish navigation bar styling
-Jacob - finish creating the forms for adoption and contact us
-Daniel - finish gallery for main page (including auto switching)
-Joey - About page & footer
-
-
-Next meeting:
-Wed 1 March at 6:30pm
-
-Emily - Finish Cats for adoption and Dogs for adoption pages
-
-Next meeting: Sunday
-Emily: styling the contact form, image (file) resizing
-Jacob: volunteering form
-Joey: footer, about us cleanup, content for main page
-Daniel: JS cleanup, style audit, clear out unused images, etc.
-
 Availability:
-Tuesday March 14:
-
-0915-1030: Emily, Joey, Jacob
-1030-1130: Emily, Joey, Jacob <-- signed up
-1430-1545: Emily, Joey
-1600-1700: Emily, Jacob
+Tuesday March 14: 1030-1130: Emily, Joey, Jacob <-- signed up
 
 
-* * * things that need to get done * * * (before Friday at 5:30 when we meet)
+* * * things that need to get done * * *
+All pages:
+    - responsiveness testing
+    - avoid inline styles
+    - remove anything that is commented out
+    - use the same footer everywhere
+Support.html:
+    - add form handling JS
+Contact.html
+    - add form handling JS
 Index page 
     - background image for landing?
 About us & support us 
     - styling orange boxes stuff
 Cats and Dog pages:
     - Add button element if time allows, otherwise remove 
-    hover effect 
-Adoption application:
-    - Finish validation JS (Daniel)
+    hover effect
 Contact: 
     - style
 
-    
+Presentation script
 
-Responsiveness
-
-Daniel: Adoption validation JS
-Joey: Home page and about us and footer
-Emily: Contact page outline and styles
-Jacob: starting a presentation script
+We will meet sunday at 3pm

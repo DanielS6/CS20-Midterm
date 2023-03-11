@@ -1,35 +1,6 @@
-.space {
-    padding-top: 10vw;
-}
-
-footer {
-    display: flex; justify-content: center;
-    height: 8vw;
-    background-color: orange;
-}
-
-footer table { 
-    border-collapse: collapse;
-    margin: 1vw auto 1vw auto;
-    row-gap: 1vw;
-}
-
-footer th, footer a {
-    margin: auto;
-    font-family: Oswald, 'Arial Narrow Bold', sans-serif;
-    color: #000000;
-    font-weight: lighter;
-    text-decoration: none;
-}
-
-footer a {
-    font-size: 1.5vw;
-    transition: all 0.2s ease-in-out;
-    padding: .3vw;
-    margin: 2vw;
-    display: flex;
-}
-
-footer a:hover {
-    background: #1c55b1b5;
+/******* MISSION STATEMENT *********/
+#mission-statement p,
+#location p {
+    font-size: 20px;
+    line-height: 30px;
 }

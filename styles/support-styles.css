@@ -23,28 +23,6 @@
     margin: 10px;
 }
 
-/* #volunteer-btn,
-#donate-btn {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
-    color: orange;
-    border: solid 2px orange;
-    border-radius: 25px;
-    padding: 10px 25px;
-}
-
-#volunteer-btn:hover,
-#donate-btn:hover {
-    color: white;
-    background-color: orange;
-}
-
-#volunteer-btn:active,
-#donate-btn:active {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0);
-    transition: .2s;
-} */
-
 .donation {
     display: flex;
     justify-content: space-between;
