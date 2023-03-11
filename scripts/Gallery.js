@@ -1,17 +1,11 @@
-// Specifically NOT using DOMContentLoaded but rather the load event so that
-// we can be sure that jQuery has also finished loading
-// See https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
-window.addEventListener( 'load', function () {
+document.addEventListener( 'DOMContentLoaded', function () {
 
     // elements
-    const $imgs = $('#gallery-wrapper img')
-    // Access the three individual images to change the pictures shown
-    const $img1 = $('#slideshow-image-left');
-    const $img2 = $('#slideshow-image-mid');
-    const $img3 = $('#slideshow-image-right');
+    const img1 = document.getElementById('slideshow-image-left');
+    const img2 = document.getElementById('slideshow-image-mid');
+    const img3 = document.getElementById('slideshow-image-right');
 
-    const $startBtn = $('#slideshow-start');
-    const $stopBtn = $('#slideshow-stop');
+    const toggleBtn = document.getElementById('slideshow-toggle');
 
     // Image sources
     const imgURLs = [
@@ -20,45 +14,57 @@ window.addEventListener( 'load', function () {
         [ './images/cat6.jpg', './images/dog6.jpg', './images/cat7.jpg' ],
         [ './images/dog7.jpg', './images/cat8.jpg', './images/dog8.jpg' ]
     ];
-    // HTML is coded to start with the first set of images.jpg
+    // HTML is coded to start with the first set of images
     let currImgIdx = 0;
-    let slideshowRunning = false;
+    let slideshowRunning = true;
 
-    // Milliseconds for fades
-    const SLIDESHOW_SPEED = 2500;
-
-    // Forward declare because of mutual recursion
-    let afterFadeIn;
     const afterFadeOut = () => {
         // Stopping the slideshow means that the next image won't fade out,
         // but we will still finish fading in the current one
         currImgIdx = (currImgIdx + 1) % imgURLs.length;
-        $img1.attr('src', imgURLs[currImgIdx][0]);
-        $img2.attr('src', imgURLs[currImgIdx][1]);
-        $img3.attr('src', imgURLs[currImgIdx][2]);
-        $imgs.fadeIn(SLIDESHOW_SPEED, afterFadeIn);
+        img1.src = imgURLs[currImgIdx][0];
+        img2.src = imgURLs[currImgIdx][1];
+        img3.src = imgURLs[currImgIdx][2];
+        img1.classList.remove('faded');
+        img2.classList.remove('faded');
+        img3.classList.remove('faded');
     };
-    afterFadeIn = () => {
+    const afterFadeIn = () => {
         // Don't continue if the slideshow is stopped
         if (slideshowRunning) {
-            $imgs.fadeOut(SLIDESHOW_SPEED, afterFadeOut);
+            img1.classList.add('faded');
+            img2.classList.add('faded');
+            img3.classList.add('faded');
         }
     };
 
-    const onStartBtn = () => {
-        // Don't trigger multiple fades if already running
-        if (!slideshowRunning) {
+    // Only need to be checking a single image
+    const onTransitionEnd = () => {
+        if (img1.classList.contains('faded')) {
+            // just faded out
+            afterFadeOut();
+        } else {
+            afterFadeIn();
+        }
+    }
+
+    const onButtonToggle = () => {
+        if (slideshowRunning) {
+            slideshowRunning = false;
+            toggleBtn.textContent = 'Resume';
+        } else {
+            toggleBtn.textContent = 'Pause';
             slideshowRunning = true;
             // start the next fade out
             afterFadeIn();
         }
     };
-    const onStopBtn = () => {
-        // No harm in setting to false if already false, doesn't do anything
-        slideshowRunning = false;
-    };
 
-    $startBtn.on('click', onStartBtn);
-    $stopBtn.on('click', onStopBtn);
+    toggleBtn.addEventListener('click', onButtonToggle);
 
+    img1.addEventListener('transitionend', onTransitionEnd);
+
+    // started true, but also trigger the first fade
+    afterFadeIn();
+    
 } );

@@ -32,9 +32,9 @@ product catalog page)
     5. Cats
     6. Dogs
     7. Adoption survey
-[] at least one external and one internal style sheet
+[x] at least one external and one internal style sheet
     [x] external style sheet: styles.css loaded on all pages
-    [] internal style sheet
+    [x] internal style sheet
 [x] fixed page elements (navigation/header/footer) as appropriate per page
     [x] navigation bar at the top
     [x] consistent style for headers
@@ -72,19 +72,6 @@ All pages:
     - avoid inline styles
     - remove anything that is commented out
     - use the same footer everywhere
-Support.html:
-    - add form handling JS
-Contact.html
-    - add form handling JS
-Index page 
-    - background image for landing?
-About us & support us 
-    - styling orange boxes stuff
-Cats and Dog pages:
-    - Add button element if time allows, otherwise remove 
-    hover effect
-Contact: 
-    - style
 
 Presentation script
 

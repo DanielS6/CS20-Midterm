@@ -30,6 +30,8 @@
 
 #donate-money {
     width: 500px;
+    /* Don't dominate on smaller screens */
+    max-width: 60%;
 }
 
 #donate-money p {
