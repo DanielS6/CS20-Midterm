@@ -1,6 +1,12 @@
 var pets = ["dog", "cat"];
 
-document.addEventListener('load', function () {
+window.onload = function() {
+    console.log("inside calling func")
+    firstFunc();
+}
+
+
+function firstFunc() {
     document.getElementById("box0").backgroundColor = "#f3f3f3"
     var imgNum = 2;
     for (i = 0; i < 6; i++) {
@@ -13,10 +19,6 @@ document.addEventListener('load', function () {
         imgNum++
     }
 
-
-    $(".about").hover(function() {
-        alert("hovered");
-    });
-});
+};
 
 

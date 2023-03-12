@@ -65,6 +65,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
     img1.addEventListener('transitionend', onTransitionEnd);
 
     // started true, but also trigger the first fade
-    afterFadeIn();
+    // for some reason the page sometimes loads with the images already
+    // faded out, don't die then
+    onTransitionEnd();
     
 } );

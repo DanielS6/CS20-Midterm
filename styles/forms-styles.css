@@ -68,6 +68,11 @@ textarea {
     width: 100%;
     font-size: 20px;
 }
+textarea {
+    height: 150px;
+    min-height: 150px;
+    resize: vertical;
+}
 
 /* Styles for form submission popups */
 .submission-popup-wrapper,
