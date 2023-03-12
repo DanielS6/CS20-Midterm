@@ -56,7 +56,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
             toggleBtn.textContent = 'Pause';
             slideshowRunning = true;
             // start the next fade out
-            afterFadeIn();
+            // for some reason the page is sometimes cached with faded
+            onTransitionEnd();
         }
     };
 
